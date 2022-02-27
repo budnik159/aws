@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h2>Data page from AWS S3 Bucket cloudaware-test</h2>
+<div>
+    <table border="1">
+        <tr>
+            <th>LastModified</th>
+            <th>ETag</th>
+            <th>Size</th>
+            <th>OwnerId</th>
+            <th>DisplayName</th>
+            <th>StorageClass</th>
+        </tr>
+        <tr th:each ="item : ${s3InfoList}">
+            <td th:utext="${item.getDate()}">...</td>
+            <td th:utext="${item.getETag()}">...</td>
+            <td th:utext="${item.getSize()}">...</td>
+            <td th:utext="${item.getOwnerId()}">...</td>
+            <td th:utext="${item.getDisplayName()}">...</td>
+            <td th:utext="${item.getStorageClass()}">...</td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>

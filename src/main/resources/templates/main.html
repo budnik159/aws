@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h2>Data page from AWS S3 Bucket cloudaware-test</h2>
+<form action="/api/s3info" method="get">
+
+    <input type="submit" value="Show data" >
+</form>
+
+</body>
+</html>
