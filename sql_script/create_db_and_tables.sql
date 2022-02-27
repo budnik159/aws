@@ -1,7 +1,6 @@
 CREATE DATABASE  aws_db;
 USE aws_db;
 
-
 CREATE TABLE s3info (
   id int NOT NULL AUTO_INCREMENT,
   key_id varchar(50),
